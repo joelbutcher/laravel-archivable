@@ -8,7 +8,7 @@
 <a href="https://packagist.org/packages/joelbutcher/laravel-archivable"><img src="https://img.shields.io/packagist/l/joelbutcher/laravel-archivable" alt="License"></a>
 </p>
 
-A simple package for making Laravel Eloquent models 'archivable'. This package registers three macros. One for Laravel's `\Illuminate\Database\Schema\Blueprint` class for writing migrations with the `archivedAt` directive. Two more macros are registered for Laravel's `\Illuminate\Database\Query\Builder` class, allowing calls to `archive` and `unArchive` between Eloquent relationships. 
+A simple package for making Laravel Eloquent models 'archivable'. This package allows for the easy archiving of models by creating various macros to be used within method chaining.
 
 ## Installation
 
@@ -20,19 +20,36 @@ composer require joelbutcher/laravel-archivable
 
 ## Usage
 
-Typically, the trait works similarly to Laravels `SoftDeletes` trait. Therefore, any model that has an `archived_at` column in it's table schema can utilise the `\LaravelArchivable\Archivable` trait.
+#### Migrations
+
+The `Archivable` trait works similarly to Laravel's `SoftDeletes` trait. To ensure proper usage of the trait. This package also ships with a helpful macro for Laravel's `\Illuminate\Database\Schema\Blueprint`. To get started, simply add the `archivedAt` macro to your migration, like so:
+
+```php
+Schema::create('posts', function (Blueprint $table) {
+    $table->id();
+    $table->unsignedBigInteger('user_id');
+    $table->string('title');
+    $table->timestamps();
+    $table->archivedAt(); // Macro
+});
+```
+
+#### Eloquent
+You can now, safely, include the `Archivable` tait in your eloquent model:
  
 ``` php
 namespace App\Models;
 
 use \Illuminate\Database\Eloquent\Model;
 
-class ArchivablePost extends Model {
+class Post extends Model {
 
     use Archivable;
     ...
 }
 ```
+
+#### Extensions
 
 The extensions shipped with this trait include; `archive`, `unArchive`, `WithArchived`, `withoutArchived`, `onlyArchived` and can be used accordingly:
 
