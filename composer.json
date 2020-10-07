@@ -1,0 +1,52 @@
+{
+    "name": "joelbutcher/laravel-archivable",
+    "description": "An archivable trait package for Laravel Eloquent models",
+    "keywords": ["laravel", "laravel-archivable"],
+    "license": "MIT",
+    "homepage": "https://github.com/joelbutcher/laravel-archivable",
+    "type": "library",
+    "support": {
+        "issues": "https://github.com/joelbutcher/laravel-archivable/issues",
+        "source": "https://github.com/joelbutcher/laravel-archivable"
+    },
+    "authors": [
+        {
+            "name": "Joel Butcher",
+            "email": "joel@joelbutcher.co.uk"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^7.4",
+        "illuminate/support": "^8.9",
+        "illuminate/database": "^8.9"
+    },
+    "require-dev": {
+        "illuminate/pagination": "^8.9",
+        "phpunit/phpunit": "^8.4|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelArchivable\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelArchivable\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelArchivable\\LaravelArchivableServiceProvider"
+            ]
+        }
+    }
+}
