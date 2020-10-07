@@ -34,6 +34,19 @@ class ArchivablePost extends Model {
 }
 ```
 
+The extensions shipped with this trait include; `archive`, `unArchive`, `WithArchived`, `withoutArchived`, `onlyArchived` and can be used accordingly:
+
+```php
+$user = User::first();
+$user->archive();
+$user->unArchive();
+
+$usersWithArchived = User::query()->withArchived();
+$onlyArchivedUsers = User::query()->onlyArchived();
+```
+
+By default, the global scope of this trait uses the `withoutArchived` extension when the trait is added to a model.
+
 ### Testing
 
 Currently, a test suite doesn't exist for this package. However, I will be writing tests in line with Laravel's testing schemes for traits. If you wish to contribute any unit tests of your own, please refer to the [contribution guides](#-contributing) below 
