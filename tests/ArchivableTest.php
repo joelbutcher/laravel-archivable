@@ -1,6 +1,5 @@
 <?php
 
-
 namespace LaravelArchivable\Tests;
 
 use LaravelArchivable\Tests\TestClasses\ArchivableModel;

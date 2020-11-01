@@ -10,14 +10,13 @@ use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
-
     public function setUp(): void
     {
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            function (string $modelName){
-                return 'LaravelArchivable\\Tests\\Database\\Factories\\' . class_basename($modelName) . 'Factory';
+            function (string $modelName) {
+                return 'LaravelArchivable\\Tests\\Database\\Factories\\'.class_basename($modelName).'Factory';
             }
         );
     }
