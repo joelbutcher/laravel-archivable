@@ -9,7 +9,7 @@ use LaravelArchivable\Tests\TestClasses\RegularModel;
 class ArchivableTest extends TestCase
 {
     /** @test */
-    function a_model_can_be_archived()
+    public function a_model_can_be_archived()
     {
         $model = ArchivableModel::factory()->create();
 
@@ -21,7 +21,7 @@ class ArchivableTest extends TestCase
     }
 
     /** @test */
-    function a_model_can_be_unarchived()
+    public function a_model_can_be_unarchived()
     {
         $model = ArchivableModel::factory()->archived()->create();
 
@@ -33,7 +33,7 @@ class ArchivableTest extends TestCase
     }
 
     /** @test */
-    function a_model_cannot_be_queried_normally_when_archived()
+    public function a_model_cannot_be_queried_normally_when_archived()
     {
         ArchivableModel::factory()->archived()->create();
 
@@ -45,7 +45,7 @@ class ArchivableTest extends TestCase
     }
 
     /** @test */
-    function all_models_can_be_found_with_the_withArchived_scope()
+    public function all_models_can_be_found_with_the_withArchived_scope()
     {
         ArchivableModel::factory()->archived()->create();
         ArchivableModel::factory()->create();
@@ -54,7 +54,7 @@ class ArchivableTest extends TestCase
     }
 
     /** @test */
-    function only_archived_models_can_be_found_with_the_onlyArchived_scope()
+    public function only_archived_models_can_be_found_with_the_onlyArchived_scope()
     {
         ArchivableModel::factory()->archived()->create();
         ArchivableModel::factory()->create();
@@ -63,7 +63,7 @@ class ArchivableTest extends TestCase
     }
 
     /** @test */
-    function models_without_the_archivable_trait_are_not_scoped()
+    public function models_without_the_archivable_trait_are_not_scoped()
     {
         RegularModel::factory()->create();
 

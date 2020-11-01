@@ -1,6 +1,5 @@
 <?php
 
-
 namespace LaravelArchivable\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -8,7 +7,6 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use LaravelArchivable\LaravelArchivableServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-
 
 class TestCase extends Orchestra
 {
@@ -18,7 +16,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            function(string $modelName){
+            function (string $modelName){
                 return 'LaravelArchivable\\Tests\\Database\\Factories\\' . class_basename($modelName) . 'Factory';
             }
         );
