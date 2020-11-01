@@ -66,8 +66,7 @@ By default, the global scope of this trait uses the `withoutArchived` extension 
 
 ### Testing
 
-Currently, a test suite doesn't exist for this package. However, I will be writing tests in line with Laravel's testing schemes for traits. If you wish to contribute any unit tests of your own, please refer to the [contribution guides](#-contributing) below 
-
+```composer test```
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
