@@ -22,6 +22,7 @@
     },
     "require-dev": {
         "illuminate/pagination": "^8.0",
+        "orchestra/testbench": "^6.3",
         "phpunit/phpunit": "^8.4|^9.0"
     },
     "autoload": {
@@ -35,7 +36,7 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit",
+        "test": "vendor/bin/phpunit --colors=always",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
 
     },
