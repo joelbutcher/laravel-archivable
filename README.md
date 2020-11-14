@@ -22,7 +22,7 @@ composer require joelbutcher/laravel-archivable
 
 #### Migrations
 
-The `Archivable` trait works similarly to Laravel's `SoftDeletes` trait. To ensure proper usage of the trait. This package also ships with a helpful macro for Laravel's `\Illuminate\Database\Schema\Blueprint`. To get started, simply add the `archivedAt` macro to your migration, like so:
+The `Archivable` trait works similarly to Laravel's `SoftDeletes` trait. This package also ships with a helpful macro for Laravel's `\Illuminate\Database\Schema\Blueprint`. To get started, simply add the `archivedAt` macro to your migration, like so:
 
 ```php
 Schema::create('posts', function (Blueprint $table) {
@@ -35,12 +35,13 @@ Schema::create('posts', function (Blueprint $table) {
 ```
 
 #### Eloquent
-You can now, safely, include the `Archivable` tait in your eloquent model:
- 
+You can now, safely, include the `Archivable` trait in your Eloquent model:
+
 ``` php
 namespace App\Models;
 
 use \Illuminate\Database\Eloquent\Model;
+use \LaravelArchivable\Archivable;
 
 class Post extends Model {
 
@@ -67,6 +68,7 @@ By default, the global scope of this trait uses the `withoutArchived` extension 
 ### Testing
 
 ```composer test```
+
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
