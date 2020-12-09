@@ -1,4 +1,4 @@
-# Laravel Archivable
+<img src="https://banners.beyondco.de/Laravel%20Archivable.png?theme=dark&packageManager=composer+require&packageName=joelbutcher%2Flaravel-archivable&pattern=architect&style=style_2&description=An+archivable+trait+for+Laravel+Eloquent+models&md=1&showWatermark=0&fontSize=200px&images=archive&widths=700&heights=700" alt="Laravel Archivable">
 
 <p align="center">
 <a href="https://github.com/joelbutcher/laravel-archivable/actions"><img src="https://github.com/joelbutcher/laravel-archivable/workflows/tests/badge.svg" alt="Build Status"></a>
