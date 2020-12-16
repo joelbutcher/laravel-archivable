@@ -5,6 +5,11 @@ namespace LaravelArchivable;
 use Exception;
 use LaravelArchivable\Scopes\ArchivableScope;
 
+/**
+ * @method static static|\Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder withArchived()
+ * @method static static|\Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder onlyArchived()
+ * @method static static|\Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder withoutArchived()
+ */
 trait Archivable
 {
     /**
