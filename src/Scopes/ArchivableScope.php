@@ -50,7 +50,7 @@ class ArchivableScope implements Scope
      */
     protected function getArchivedAtColumn(Builder $builder)
     {
-        if (count($builder->getQuery()->joins) > 0) {
+        if (count((array) $builder->getQuery()->joins) > 0) {
             return $builder->getModel()->getQualifiedArchivedAtColumn();
         }
 
