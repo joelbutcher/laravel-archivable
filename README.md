@@ -52,7 +52,7 @@ class Post extends Model {
 
 #### Extensions
 
-The extensions shipped with this trait include; `archive`, `unArchive`, `WithArchived`, `withoutArchived`, `onlyArchived` and can be used accordingly:
+The extensions shipped with this trait include; `archive`, `unArchive`, `withArchived`, `withoutArchived`, `onlyArchived` and can be used accordingly:
 
 ```php
 $user = User::first();
