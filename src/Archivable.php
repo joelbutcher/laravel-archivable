@@ -39,6 +39,12 @@ trait Archivable
         if (! isset($this->casts[$this->getArchivedAtColumn()])) {
             $this->casts[$this->getArchivedAtColumn()] = 'datetime';
         }
+        $this->addObservableEvents([
+            'archiving',
+            'archived',
+            'unArchiving',
+            'unArchived'
+        ]);
     }
 
     /**
