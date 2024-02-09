@@ -2,6 +2,18 @@
 
 All notable changes to `laravel-archivable` will be documented in this file
 
+## v1.3.1 - 2024-02-09
+
+### What's Changed
+
+* Make events observable by [@Kaylakaze](https://github.com/Kaylakaze) in https://github.com/joelbutcher/laravel-archivable/pull/22
+
+### New Contributors
+
+* [@Kaylakaze](https://github.com/Kaylakaze) made their first contribution in https://github.com/joelbutcher/laravel-archivable/pull/22
+
+**Full Changelog**: https://github.com/joelbutcher/laravel-archivable/compare/v1.3.0...v1.3.1
+
 ## v1.3.0 - 2023-11-02
 
 ### What's Changed
@@ -14,7 +26,7 @@ All notable changes to `laravel-archivable` will be documented in this file
 ## v1.10.0 - 2023-02-24
 
 ### What's Changed
-    
+
 - Fix camel case by [@Joel-Jensen](https://github.com/Joel-Jensen) https://github.com/joelbutcher/laravel-archivable/pull/12
 - Laravel 10.x Compatibility by [@laravel-shift](https://github.com/laravel-shift) in https://github.com/joelbutcher/laravel-archivable/pull/14
 
@@ -40,7 +52,7 @@ All notable changes to `laravel-archivable` will be documented in this file
 
 ### What's Changed
 
-- Support PHP8 by [@joelbutcher](https://github.com/joelbutcher) 
+- Support PHP8 by [@joelbutcher](https://github.com/joelbutcher)
 
 **Full Changelog**: https://github.com/joelbutcher/laravel-archivable/compare/v1.1.1...v1.1.2
 
