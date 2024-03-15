@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-archivable` will be documented in this file
 
+## v1.4.0 - 2024-02-28
+
+### What's Changed
+
+* Laravel 11.x Compatibility by [@laravel-shift](https://github.com/laravel-shift) in https://github.com/joelbutcher/laravel-archivable/pull/23
+
+**Full Changelog**: https://github.com/joelbutcher/laravel-archivable/compare/v1.3.1...v1.4.0
+
 ## v1.3.1 - 2024-02-09
 
 ### What's Changed
