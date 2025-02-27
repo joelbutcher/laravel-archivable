@@ -2,6 +2,19 @@
 
 All notable changes to `laravel-archivable` will be documented in this file
 
+## v1.12.0 - 2025-02-27
+
+### What's Changed
+
+* Update README.md by [@wajihkm](https://github.com/wajihkm) in https://github.com/joelbutcher/laravel-archivable/pull/29
+* Laravel 12.x Compatibility by [@laravel-shift](https://github.com/laravel-shift) in https://github.com/joelbutcher/laravel-archivable/pull/30
+
+### New Contributors
+
+* [@wajihkm](https://github.com/wajihkm) made their first contribution in https://github.com/joelbutcher/laravel-archivable/pull/29
+
+**Full Changelog**: https://github.com/joelbutcher/laravel-archivable/compare/v1.11.0...v1.12.0
+
 ## v1.11.0 - 2024-07-11
 
 ### What's Changed
