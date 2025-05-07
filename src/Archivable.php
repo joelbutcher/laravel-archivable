@@ -206,4 +206,22 @@ trait Archivable
     {
         return $this->qualifyColumn($this->getArchivedAtColumn());
     }
+
+    /**
+     * Resolve the bindings for a given route.
+     * @see \Illuminate\Database\Eloquente\Model::resolveRouteBinding
+     * 
+     * @return \Illuminate\Database\Eloquent\Model
+     */
+    public function resolveRouteBinding($value, $field = null)
+    {
+        if (
+            request()->route()->allowsArchivedBindings()
+        ) {
+            return $this->resolveRouteBindingQuery($this, $value, $field)
+                ->withoutGlobalScopes([ArchivableScope::class])->first();
+        }
+
+        return parent::resolveRouteBinding($value, $field);
+    }
 }
