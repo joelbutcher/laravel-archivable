@@ -76,6 +76,17 @@ $onlyArchivedUsers = User::query()->onlyArchived();
 
 By default, the global scope of this trait uses the `withoutArchived` extension when the trait is added to a model.
 
+#### Archived models in route implicit binding
+Typically, implicit model binding will not retrieve models that have been archived. However, you may instruct the implicit binding to retrieve these models by chaining the withArchived method onto your route's definition:
+
+```php
+use App\Models\User;
+ 
+Route::get('/users/{user}', function (User $user) {
+    return $user->email;
+})->withArchived();
+```
+
 ### Testing
 
 ```composer test```

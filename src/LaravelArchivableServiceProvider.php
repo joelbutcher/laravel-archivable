@@ -4,6 +4,7 @@ namespace LaravelArchivable;
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\Route;
 
 class LaravelArchivableServiceProvider extends ServiceProvider
 {
@@ -30,6 +31,16 @@ class LaravelArchivableServiceProvider extends ServiceProvider
 
         Blueprint::macro('dropArchivedAt', function ($column = 'archived_at') {
             return $this->dropColumn($column);
+        });
+
+        Route::macro('withArchived', function (bool $withArchived = true) {
+            $this->withArchivedBindings = $withArchived;
+
+            return $this;
+        });
+
+        Route::macro('allowsArchivedBindings', function () {
+            return $this->withArchivedBindings ?? false;
         });
     }
 
