@@ -2,6 +2,19 @@
 
 All notable changes to `laravel-archivable` will be documented in this file
 
+## v1.13.0 - 2026-05-23
+
+### What's Changed
+
+* feat: add withArchived route instruction by [@omaratpxt](https://github.com/omaratpxt) in https://github.com/joelbutcher/laravel-archivable/pull/31
+* Laravel 13.x Compatibility by [@laravel-shift](https://github.com/laravel-shift) in https://github.com/joelbutcher/laravel-archivable/pull/33
+
+### New Contributors
+
+* [@omaratpxt](https://github.com/omaratpxt) made their first contribution in https://github.com/joelbutcher/laravel-archivable/pull/31
+
+**Full Changelog**: https://github.com/joelbutcher/laravel-archivable/compare/v1.12.0...v1.13.0
+
 ## v1.12.0 - 2025-02-27
 
 ### What's Changed
